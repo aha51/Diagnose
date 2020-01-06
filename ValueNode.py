@@ -8,9 +8,8 @@ class ValueNode(Node):
     def __init__(self, label, nextNodes):
         self.__init__(self, label, nextNodes)
     
-    def getNextNodes(self, response):
+    def getNextNode(self, response):
         keys = nextNodes.keys()
         for i in keys:
             if response > keys[i] & response < keys[i + 1]:
                 return nextNodes[keys[i]]
-            s
